@@ -12,6 +12,10 @@ class ArticlesController < ApplicationController
 		@article = Article.new
 	end
 
+	def edit
+		@article = Article.find(params[:id])
+	end
+
 	def create
 		# Shows parameters and values on page.
 		# render plain: params[:article].inspect
