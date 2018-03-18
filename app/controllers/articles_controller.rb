@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+	# Basic authentication
+	http_basic_authenticate_with name: "name", password: "password", except: [:index, :show] 
+
+
 	def index
 		# Rerieve all articles from model.
 		@articles = Article.all
