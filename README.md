@@ -16,3 +16,4 @@ Test blog made with Rails 5.1.5
 	* https://www.daveferrara1.com/ruby-in-rails-switch-from-sqlite3-to-postgres/
 	* https://stackoverflow.com/questions/39004608/pgconnectionbad-could-not-translate-host-name-error-after-running-export-data
 	* https://stackoverflow.com/questions/28404482/rails-fatal-database-myapp-development-does-not-exist/28404606
+* Rememeber to run: *heroku run rake db:migrate* after deployment. 
