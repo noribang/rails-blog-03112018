@@ -1,4 +1,4 @@
-<!-- Shows individual article -->
+<!-- Shows individual article and comments -->
 <p>
 	<strong>Title:</strong>
 	<%= @article.title %>
@@ -7,6 +7,18 @@
 	<strong>Text:</strong>
 	<%= @article.text %>
 </p>
+
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
+	<p>
+		<strong>Commenter:</strong>
+		<%= comment.commenter %>
+	</p>
+	<p>
+		<strong>Comment:</strong>
+		<%= comment.body %>
+	</p>
+<% end %>
 
 <h2>Add a comment:</h2>
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
