@@ -1,3 +1,6 @@
+# Added since push to heroku failed.
+config.assets.initialize_on_precompile = false
+
 require_relative 'boot'
 
 require 'rails/all'
