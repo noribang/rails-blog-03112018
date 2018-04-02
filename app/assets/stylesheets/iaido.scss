@@ -1,0 +1,18 @@
+// Place all the styles related to the Iaido controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.jumbotron {
+  height: 45em;
+  /*background: url("/images/IMG523bw.jpg") no-repeat center center;*/
+  background: image-url('IMG523bw.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+ul {
+	list-style-type: none;
+}

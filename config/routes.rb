@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+  get 'iaido/index'
+
   get 'welcome/index'
 
   # get 'welcome/create'
 
   # get 'welcome/new'
 
-  root 'welcome#index'
+  # root 'welcome#index'
+
+  root 'iaido#index'
 
   resources :articles do
   	resources :comments
