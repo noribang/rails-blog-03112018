@@ -7,14 +7,34 @@
 	<link rel='stylesheet' href='bwstyle.css'/>
 
 	<style type="text/css">
-/*		body {
+		body {
 			margin: 0;
+		}
+/*		h1 {
+			z-index: -1;
 		}*/
+		.jumbotron {
+			padding: 0px;
+		}
+		.container-fluid {
+		     padding-right: 0px; 
+		     padding-left: 0px; 
+		 }
+
+		.btc-title {
+			margin-left: 2em;
+			/*z-index: -1;*/
+			margin-top: 202px;
+			text-shadow: 0.2px 0.2px #000;
+		}
 		.topnav {
 			overflow: hidden;
 			/*background-color: #d0d0d0;*/
 			/* Background color with 0.1 opacity. */
 			background: rgba(76, 175, 80, 0.1);
+			position: fixed;
+			top: 0;
+			width: 100%;
 		}
 		.topnav a {
 			text-decoration: none;
@@ -40,10 +60,10 @@
 			padding-right: 16px;
 			/*margin-right: 0px;*/
 		}
-		#blog-link {
+/*		#blog-link {
 			padding-left: 0px;
 			margin-left: -16px;
-		}
+		}*/
 		#btc-heading {
 			color: #4B0082;	
 		}
@@ -51,12 +71,17 @@
 			color: #8A2BE2;	
 		}
 
+/*		@media screen and (min-width: 768px) {
+			.jumbotron {
+			    padding: 0px 0;
+			}
+		}*/
 		@media screen and (max-width: 1100px) {
 			.topnav a:not(:first-child) {
 				display: none;
 			}
 			.topnav a.icon {
-				/*float: right;*/
+				float: right;
 				display: block;
 				color: #fff;
 			}
@@ -65,8 +90,10 @@
 		@media screen and (max-width: 1100px) {
 			.topnav.responsive {
 				position: relative;
+				z-index: 1;
 			}
 			.topnav.responsive .icon {
+				position: relative;
 				position: absolute;
 				right: 0;
 				top: 0;
@@ -75,6 +102,10 @@
 				float: none;
 				display: block;
 				text-align: left;
+				z-index: 1;
+			}
+			.topnav.responsive#blog-link {
+				padding-top: 5px;
 			}
 		}
 
@@ -88,13 +119,16 @@
         	<div class="topnav" id="myTopnav">
         		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
         		<a href="#home" class="active" id="home-link">Home</a>
-        		<a href="#blog" id="blog-link"><%= link_to 'Blog', controller: 'articles' %></a>
+        		<!-- <a href="#blog" id="blog-link"><%#= link_to 'Blog', controller: 'articles' %></a> -->
+        		<%= link_to 'Blog', controller: 'articles' %>
         		<a href="#contact">Contact</a>
         		<a href="#about">About</a>
         	</div>
-        	
-            <h1 id="btc-heading">btc id</h1>
-            <p id="btc-subheading">Buddhist Temple of Chicago Iaido Dojo</p>
+        	<div class="btc-title">
+        		<h1 id="btc-heading">btc id</h1>
+		        <p id="btc-subheading">Buddhist Temple of Chicago Iaido Dojo</p>	
+        	</div>
+            
 <!--             <button type="button"><a href="about.html">enter</a></button> -->
         </div>
       </div>
